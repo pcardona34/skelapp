@@ -116,7 +116,7 @@ démarrage, par exemple&nbsp;:
 
 + La cible de la publication est la branche *gh-pages* qui coïncide avec la branche *master*.
 + Effectuez préalablement ce réglage dans les paramètres de votre dépôt 
-Github la première fois. Vous devez aussi créer un token d'authentification come expliqué dans la documentation de Github.
+Github la première fois. Vous devez aussi créer un token d'authentification comme expliqué dans la documentation de Github.
 
 Puis exécutez:
 
