@@ -1,0 +1,17 @@
+{
+	"rubriques":
+		[
+			{
+			"lien": "apropos",
+			"legende": "À propos"
+			},
+			{
+			"lien": "fabrique",
+			"legende": "Fabrique"
+			},
+			{
+			"lien": "credits",
+			"legende": "Crédits"
+			}
+		]
+}

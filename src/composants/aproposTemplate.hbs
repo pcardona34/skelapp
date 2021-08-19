@@ -1,0 +1,62 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2012-2020 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+<!-- Template : aproposTemplate.hbs -->
+
+<!-- Onglets / tabs -->
+
+<div class="w3-padding-24 <w3-border">
+<div class="w3-bar w3-light-grey w3-border">
+{{#each rubs}}
+  <button class="w3-bar-item w3-button tablink 
+  {{#if @first}}
+  triadic
+  {{/if}}
+  " onclick="afficheRubrique(event, '{{lien}}')">{{legende}} 
+  </button>
+{{/each}}
+</div>
+</div>
+
+<div id="apropos" class="rubrique">
+<div class="w3-container">
+    <h3 class="texte-fonce">À propos de {{ app_name }}
+     - version {{version}}</h3>
+    <p>Cette application Web permet de s'exercer...</p>
+    <p>Pour débuter, choisissez une <b>liste</b> dans le menu.</p>
+</div>
+</div>
+
+<div id="fabrique" class="rubrique" style="display:none">
+<div class="w3-container">
+    <h3 class="texte-fonce">Fabrique de {{ app_name }}</h3>
+    <p><b>{{ app_name }}</b> a été réalisé grâce aux logiciels 
+suivants&nbsp;:</p>
+    <ul style="list-style: none">
+	    {{#each module}}
+	    <li><a href="{{module.site}}" 
+	    target="_blank" class="texte-lien">{{this.appname}}</a> de {{this.auteur}}. 
+	    Licence {{this.licence}}. 
+	    <a href="{{this.code}}" target="_blank" class="texte-lien">
+	    <i class="icon-lien"></i> Code source</a></li>
+	    {{/each}}
+    </ul>
+</div>
+</div>
+
+<div id="credits" class="rubrique" style="display:none">
+<div class="w3-container">
+    <h3 class="texte-fonce">Crédit photo</h3>
+    <p>Le logo en page d'accueil est l'œuvre de ... : 
+    <a target="_blank" href="..." class="texte-lien">
+    <i class="icon-lien"></i> designed by ... / ...</a></p>
+</div>
+</div>
+
+
+

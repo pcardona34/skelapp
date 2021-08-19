@@ -1,0 +1,79 @@
+[
+	{
+		"appname": "Agrégateur de scripts (bundle) : Browserify",
+		"auteur": "Browserify.org",
+		"site": "http://browserify.org/",
+		"licence": "MIT",
+		"code": "https://github.com/browserify"
+	},
+	{
+		"appname": "Serveur de développement : Budo",
+		"auteur": "Matt DesLauriers",
+		"site": "https://github.com/mattdesl/budo/blob/master/README.md",
+		"licence": "MIT",
+		"code": "https://github.com/mattdesl/budo"
+	},
+	{
+		"appname": "Manipulation du DOM : Chibi",
+		"auteur": "Kyle Barrow",
+		"site": "https://github.com/kylebarrow/chibi",
+		"licence": "MIT",
+		"code": "https://github.com/kylebarrow/chibi"
+	},
+	{
+		"appname": "Minification du code CSS : cleanCSS",
+		"auteur": "Jakub Pawlowicz",
+		"site": "https://www.npmjs.com/package/clean-css",
+		"licence": "MIT",
+		"code": "https://github.com/jakubpawlowicz/clean-css"
+	},
+    {
+		"appname": "Template : Handlebars",
+		"auteur": "Yehuda Katz",
+		"site": "https://handlebarsjs.com/",
+		"licence": "MIT",
+		"code": "https://github.com/wycats/handlebars.js"
+	},
+	{
+		"appname": "Handlebars avec Browserify : hbsfy",
+		"auteur": "Esa-Matti Suuronen",
+		"site": "https://www.npmjs.com/package/hbsfy",
+		"licence": "MIT",
+		"code": "https://github.com/epeli/node-hbsfy"
+	},
+	{
+		"appname": "Icones : IcoMoon Free Version",
+		"auteur": "Keyamoon",
+		"site": "https://icomoon.io/",
+		"licence": "GPL / CC BY 4.0",
+		"code": "https://github.com/Keyamoon/IcoMoon-Free/archive/master.zip"
+	},
+    {
+      "appname": "Minification du code JS : jsmin",
+      "auteur": "D. Crockford, F. Marcia, P. Krumins",
+      "site": "https://www.npmjs.com/package/jsmin",
+      "licence": "All right reserved",
+      "code": "https://github.com/pkrumins/node-jsmin"
+    },
+	{
+		"appname": "Routage : Navigo",
+		"auteur": "Krasimir Tsonev",
+		"site": "https://github.com/krasimir/navigo",
+		"licence": "MIT",
+		"code": "https://github.com/krasimir/navigo"
+	},
+    {
+        "appname": "Service Worker : vanilla-pwa",
+        "auteur": "Arjun Mahishi",
+        "site": "https://www.npmjs.com/package/vanilla-pwa",
+        "licence": "MIT",
+        "code": "https://github.com/arjunmahishi/vanilla-pwa"
+    },
+    {
+		"appname": "Style : W3.css",
+		"auteur": "W3schools",
+		"site": "https://www.w3schools.com/w3css/default.asp",
+		"licence": "Usage libre",
+		"code": "https://github.com/JaniRefsnes/w3css"
+	}
+]

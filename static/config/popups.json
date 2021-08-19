@@ -1,0 +1,44 @@
+{
+	"infos": [
+	{
+	"msgid": "0",
+	"titre": "Message de cette application",
+	"contenu": "Ce message permet de tester le module de notification !"
+	},
+	{
+	"msgid": "1",
+	"titre": "Mode d'emploi",
+	"contenu": "Vous devez sélectionner un mot !"
+	},
+	{
+	"msgid": "2",
+	"titre": "Bilan",
+	"contenu": "Vous pouvez encore améliorer votre saisie."
+	},
+	{
+	"msgid": "3",
+	"titre": "Bilan",
+	"contenu": "Parfait ! Aucune erreur."
+	},
+	{
+	"msgid": "4",
+	"titre": "Erreur 4 dans l'application",
+	"contenu": "Le texte attendu est manquant."
+	},
+	{
+	"msgid": "5",
+	"titre": "Mode d'emploi",
+	"contenu": "Aucun texte n'a été saisi."
+	},
+	{
+	"msgid": "6",
+	"titre": "Assistant",
+	"contenu": "Vous n'avez pas encore remplacé toutes les lacunes."
+	},
+	{
+	"msgid": "7",
+	"titre": "Assistant indisponible",
+	"contenu": "Il ne reste aucune lacune à remplacer."
+	}
+	]
+}

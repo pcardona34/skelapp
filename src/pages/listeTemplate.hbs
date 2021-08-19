@@ -1,0 +1,46 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2021 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+<!-- Liste filtrée des exercices
+  listeTemplate.hbs
+  -->
+
+
+<div class="w3-container w3-padding">
+
+<div class="w3-card-4 w3-light-gray" id="panneau_recherche" style="display: none">
+	<div class="w3-container analogue">
+		  <h3>Chercher un {{exercice}}</h3>
+	</div>
+	<div class="w3-container w3-padding-16">
+	<form>
+		<label class="w3-text-gray"><i class="icon-filtre"></i> Filtre :</label>
+		<input class="w3-input w3-border w3-padding" 
+		type="text" 
+		placeholder="Titre ou numéro..." 
+		spellcheck="false" 
+	    oninput="filtrer('liste', this.value)">
+	</form>
+	</div>
+</div>
+
+<div class="w3-container w3-padding">
+
+    <ul id="liste" class="w3-bar-block w3-border w3-light-gray" 
+    style="list-style-type: none; margin: 0; padding: 0">
+	    {{#each info}}
+	    {{#if (estDuNiveauRequis this.niveau)}}
+		<li><a href="#!{{../cible}}/{{this.id}}" class="w3-bar-item w3-button">
+			    {{this.id}} : {{this.titre}} </a>
+		</li>
+	    {{/if}}
+	    {{/each}}
+    </ul>
+</div>
+
+</div>

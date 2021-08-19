@@ -1,0 +1,31 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2012-2020 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+<!-- Template : formulaire de modification du profil 
+  formProfilTemplate.hbs :
+-->
+
+<div class="w3-container">
+
+<div class="w3-container w3-padding w3-border" style="max-width: 500px"
+ id="zone_saisie_preferences">
+<form class="w3-container>
+<label for="niveau_choisi" class="w3-text-teal">
+Niveau d'enseignement
+</label>
+<select name="niveau_choisi" id="niveau_choisi" class="w3-select w3-border w3-mobile"
+  onchange="profil.changeNiveau()">
+<option value="" disabled selected>Choisissez un niveau</option>
+{{#each niveaux}}
+  <option value="{{chiffre}}">{{nom}}</option>
+{{/each}}
+</select>
+</form>
+</div>
+
+</div>

@@ -1,0 +1,47 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2021 - Patrick Cardona            *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+ <!-- Navigation : Menu : menuTemplate.hbs -->
+
+<!-- ============================================ -->
+
+<!-- Sidebar -->
+<div class="w3-sidebar w3-bar-block w3-card" style="display:none" id="menu_gauche">
+  <button onclick="refermer_navigation()" 
+  class="w3-bar-item w3-button w3-blue-gray">Fermer 
+  <i class="icon-fermer w3-right"></i></button>
+{{#each this.items}}
+  <a href="{{lien}}" class="w3-bar-item w3-button w3-light-gray w3-border-bottom">
+  {{{icone}}} {{legende}}</a>
+  {{/each}}
+</div>
+
+<!-- Contexte -->
+<div class="{{couleur}}">
+{{#with this.contexte}}
+  {{#if bouton}}
+    <button class="w3-button w3-{{couleur}} w3-xlarge" 
+    onclick="{{action}}">{{{icone}}}</button>
+  {{else}}
+    <a href="{{{action}}}" class="w3-button w3-{{couleur}} w3-xlarge">{{{icone}}}</a>
+  {{/if}}
+  
+<!-- Actions -->
+{{#each ../actions}}
+  {{#if bouton}}
+      <button onclick="{{lien}}" class="w3-bar-item w3-button w3-{{couleur}} w3-right">{{{icone}}} {{legende}} 
+      </button>
+  {{else}}
+      <a href="{{lien}}" class="w3-bar-item w3-button w3-{{couleur}} w3-right">{{{icone}}} {{legende}}</a>
+  {{/if}}
+{{/each}}
+  <div class="w3-container">
+    <h1>{{titre}}</h1>
+  </div>
+</div>
+{{/with}}

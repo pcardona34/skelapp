@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: https://pcardona34.github.io/skelapp/favicon.ico
+Disallow: https://pcardona34.github.io/skelapp/build/*
+Disallow: https://pcardona34.github.io/skelapp/public/*
+Disallow: https://pcardona34.github.io/skelapp/static/*
+Disallow: https://pcardona34.github.io/skelapp/src/*

@@ -1,0 +1,45 @@
+{
+  "name": "skelapp",
+  "version": "1.0.0",
+  "description": "Modèle PWA",
+  "main": "build/app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "help": "bash ./outils.sh help",
+    "logo": "bash ./generer-logo.sh ${npm_package_name} && bash ./installer-logo.sh ${npm_package_name}",
+    "dev": "bash ./outils.sh dev",
+    "vendors": "bash ./outils.sh vendors",
+    "build": "bash ./outils.sh build",
+    "test": "bash ./outils.sh test",
+    "clean": "bash ./outils.sh clean",
+    "deploy": "bash ./outils.sh deploy"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pcardona34/${npm_package_name}.git"
+  },
+  "keywords": [
+    "pwa template exerciseur"
+  ],
+  "author": "Patrick Cardona",
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/pcardona34/${npm_package_name}/issues"
+  },
+  "homepage": "https://github.com/pcardona34/${npm_package_name}#readme",
+  "dependencies": {
+    "chibijs": ">=3.0.9",
+    "navigo": ">=7.1.2"
+  },
+  "devDependencies": {
+    "clean-css": "^5.1.5",
+    "handlebars": ">=4.7.7",
+    "hbsfy": ">=2.8.1",
+    "http-proxy": ">=1.18.1",
+    "http-server": ">=13.0.0",
+    "jsmin": ">=1.0.1",
+    "lodash": ">=4.17.21"
+  }
+}

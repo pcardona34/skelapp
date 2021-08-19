@@ -1,0 +1,29 @@
+{ 
+	"menu":
+	{
+		"did": "",
+		"couleur": "blue-gray",
+		"contexte": {
+    		"bouton": false,
+    		"titre": "Exécution",
+    		"icone": "<i class='icon-retourner'></i>",
+    		"action": "#!liste/exercices"
+		},
+		"items": [],
+		"actions":
+		[
+			{
+    			"bouton": false,
+    			"icone": "<i class='icon-info'></i>",
+    			"legende": "Mentions légales",
+    			"lien": "#!mentions/exercice"
+    			},
+			{
+    			"bouton": false,
+    			"icone": "<i class='icon-consigne'></i>",
+    			"legende": "Consigne",
+    			"lien": "#!consigne/exercice"
+    			}
+		]
+	}
+}

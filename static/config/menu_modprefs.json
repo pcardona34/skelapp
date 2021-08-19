@@ -1,0 +1,23 @@
+{
+	"menu":
+		{
+		"couleur": "clair",
+		"contexte":
+			{
+			"bouton": false,
+			"titre": "Modification du profil",
+			"icone": "<i class='icon-gauche'></i>",
+			"action": "#!profil"
+			},
+		"items": [],
+		"actions":
+			[
+				{
+				"bouton": false,
+				"icone": "<i class='icon-finir'></i>",
+				"legende": "Appliquer",
+				"lien": "#!profil"
+				}
+			]
+		}
+}

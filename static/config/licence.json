@@ -1,0 +1,13 @@
+{
+	"licence": {
+		"auteur": "Patrick Cardona",
+		"debut": "2020",
+		"pages": [{
+				"texte": "Le code JavaScript de cette page est un logiciel libre. Vous pouvez le redistribuer et/ou le modifier selon les termes de la licence GNU General Public License (GNU GPL) telle que publiée par la Free  Software Foundation, en version 3 de la licence, ou (à votre discrétion) toute version ultérieure. Le code est distribué SANS AUCUNE GARANTIE ; sans même la garantie implicite de MARCHANDABILITÉ ou d'ADÉQUATION À UN BUT PARTICULIER. Consultez la GNU GPL pour plus de détails."
+			},
+			{
+				"texte": "En tant que permission supplémentaire selon les termes de la GNU GPL version 3 section 7, vous pouvez distribuer des formes « non-source » (par ex., minimisées ou compactées) de ce code sans la copie de la GNU GPL normalement requise section 4, à condition d'inclure cette notice de licence et une URL par laquelle les destinataires peuvent accéder au code source correspondant.<br><br>Consultez la licence GNU GPL pour plus de détails:<br /><a href='http://www.gnu.org/licenses/' target='_blank'>http://www.gnu.org/licenses/</a>."
+			}
+		]
+	}
+}

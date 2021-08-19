@@ -1,0 +1,5 @@
+Copiez ici votre logo original : logo.jpg
+
+Puis exécutez à la racine du projet :
+
+    npm run logo

@@ -1,0 +1,78 @@
+<!-- ==================================
+  *            skelapp                  *
+ * ==================================== *
+ * (c)2012-2020 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+ <!-- Navigation : Menu : menuExerciceTemplate.hbs -->
+
+<!-- ============================================ -->
+
+<!-- Sidebar gauche -->
+
+<!-- Contexte -->
+<div class="w3-{{couleur}}">
+{{#with this.contexte}}
+  {{#if bouton}}
+    <button class="w3-button w3-{{couleur}} w3-xlarge" 
+    onclick="{{action}}">{{{icone}}}</button>
+  {{else}}
+    <a href="{{{action}}}" class="w3-button w3-{{couleur}} w3-xlarge">{{{icone}}}</a>
+  {{/if}}
+
+
+<!-- Actions : menu en version mobile -->
+<span class="w3-hide-large w3-hide-medium">
+<button class="w3-button w3-right w3-xlarge w3-{{couleur}}"
+onclick="$('#menu_mobile_actions').toggle()">
+<i class="icon-actions"></i>
+</button></span>
+
+<div class="w3-bar-sidebar w3-bar-block" 
+style="display:none" 
+id="menu_mobile_actions">
+{{#each ../actionsMobile}}
+  {{#if bouton}}
+      <button onclick="{{lien}}/{{@root.did}}" 
+      class="w3-bar-item w3-button w3-{{couleur}} w3-border-bottom
+      {{#if @first}} w3-border-top{{/if}}
+      ">
+      {{{icone}}} {{legende}} 
+      </button>
+  {{else}}
+      <a href="{{lien}}/{{@root.did}}" 
+      class="w3-bar-item w3-button w3-{{couleur}} w3-border-bottom
+      {{#if @first}} w3-border-top{{/if}}
+      ">
+      {{{icone}}} {{legende}}</a>
+  {{/if}}
+{{/each}}
+</div>
+
+<!-- Actions : menu en version bureau -->
+<span class="w3-hide-small">
+{{#each ../actions}}
+  {{#if bouton}}
+      <button onclick="{{lien}}/{{@root.did}}" class="w3-bar-item w3-button w3-{{couleur}} w3-right">{{{icone}}} {{legende}} 
+      </button>
+  {{else}}
+      <a href="{{lien}}/{{@root.did}}" class="w3-bar-item w3-button w3-{{couleur}} w3-right">{{{icone}}} {{legende}}</a>
+  {{/if}}
+{{/each}}
+</span>
+
+<!-- Titre du contexte -->
+  <div class="w3-container">
+    <h1>
+    <span class="w3-hide-small">{{titre}} : {{../exercice}} 
+    	</span>
+    <span class="w3-hide-medium w3-hide-large">
+    {{capitalisePremiereLettre ../exercice}}
+    </span>
+    {{../did}}
+    </h1>
+  </div>
+</div>
+{{/with}}

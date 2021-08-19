@@ -1,0 +1,14 @@
+{ 
+	"menu":
+		{
+		"couleur": "clair",
+		"contexte": {
+    		"bouton": false,
+    		"titre": "Aide",
+    		"icone": "<i class='icon-retourner'></i>",
+    		"action": "#!"
+		},
+	"items": [],
+	"actions":[]
+		}
+}

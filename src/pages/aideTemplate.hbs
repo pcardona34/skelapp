@@ -1,0 +1,44 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2021 - Patrick Cardona            *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+ 
+ <!-- Template : aideTemplate.hbs -->
+
+<div class="w3-container w3-padding">
+
+<!-- Prise en main -->
+<button onclick="alterner_section_aide('aide0')" class="w3-button w3-light-gray w3-block w3-left-align 
+w3-border w3-mobile">
+Prise en main
+</button>
+<div id="aide0" class="w3-container w3-hide w3-border">
+{{>prise_en_main}}
+</div>
+
+<!-- A propos -->
+<button onclick="alterner_section_aide('aide4')" class="w3-button w3-light-gray w3-block w3-left-align
+ w3-border w3-mobile">
+À propos
+</button>
+<div id="aide4" class="w3-container w3-hide w3-border">
+{{>apropos modeleApropos}}
+</div>
+
+<!-- licence -->
+<button onclick="alterner_section_aide('aide5')" class="w3-button w3-light-gray
+ w3-block w3-left-align
+ w3-border w3-mobile">
+Licence
+</button>
+<div id="aide5" class="w3-container w3-hide w3-border">
+<header>
+<h3 class="texte-fonce">Licence</h3>
+</header>
+{{>licence modeleLicence}}
+</div>
+
+</div>

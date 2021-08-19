@@ -1,0 +1,24 @@
+{
+	"menu":
+		{
+		"did": "",
+		"couleur": "blue-gray",
+		"contexte": 
+			{
+			"bouton": false,
+    			"titre": "Consigne",
+    			"icone": "<i class='icon-retourner'></i>",
+    			"action": "#!liste/exercices"
+			},
+			"items": [],
+			"actions":
+			[
+    				{
+    				"bouton": false,
+    				"icone": "<i class='icon-plume'></i>",
+    				"legende": "Reprendre l'exercice",
+    				"lien": "#!effectuer/exercice"
+    				}
+			]
+		}
+}

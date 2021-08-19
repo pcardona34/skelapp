@@ -1,0 +1,24 @@
+{
+	"menu":
+		{
+		"exercice": "exercice",
+		"couleur": "blue-gray",
+		"contexte":
+			{
+			"bouton": false,
+			"titre": "Liste",
+			"icone": "<i class='icon-retourner'></i>",
+			"action": "#!"
+			},
+		"items": [],
+		"actions":
+		[
+			{
+			"bouton": true,
+			"icone": "<i class='icon-recherche'></i>",
+			"legende": "Filtrer la liste",
+			"lien": "$('#panneau_recherche').toggle()"
+			}
+		]
+		}
+}

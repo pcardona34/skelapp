@@ -1,0 +1,39 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2012-2020 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+ <!-- Navigation : Menu : menuListeTemplate.hbs -->
+
+<!-- ============================================ -->
+
+
+<!-- Navigation -->
+<div class="w3-{{couleur}}">
+{{#with this.contexte}}
+  {{#if bouton}}
+    <button class="w3-button w3-{{couleur}} w3-xlarge" onclick="{{action}}">{{{icone}}}</button>
+  {{else}}
+    <a href="{{{action}}}" class="w3-button w3-{{couleur}} w3-xlarge">{{{icone}}}</a>
+  {{/if}}
+
+<!-- Actions -->
+{{#each ../actions}}
+  {{#if bouton}}
+      <button onclick="{{lien}}" class="w3-bar-item w3-button w3-{{couleur}} w3-right">{{{icone}}} {{legende}} 
+      </button>
+  {{else}}
+      <a href="{{lien}}" class="w3-bar-item w3-button w3-{{couleur}} w3-right">{{{icone}}} {{legende}}</a>
+  {{/if}}
+{{/each}}
+
+<!-- Titre du contexte -->
+  <div class="w3-container">
+    <h1>{{capitalisePremiereLettre ../exercice}}s 
+    </h1>
+  </div>
+</div>
+{{/with}}

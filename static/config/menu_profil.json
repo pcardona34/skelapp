@@ -1,0 +1,23 @@
+{
+	"menu":
+		{
+		"couleur": "clair",
+		"contexte":
+			{
+			"bouton": false,
+			"titre": "Profil",
+			"icone": "<i class='icon-retourner'></i>",
+			"action": "#!"
+		},
+		"items": [],
+		"actions":
+			[
+				{
+				"bouton": false,
+				"icone": "<i class='icon-editer'></i>",
+				"legende": "Modifier le profil",
+				"lien": "#!modprefs"
+				}
+			]
+		}
+}

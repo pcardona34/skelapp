@@ -1,0 +1,36 @@
+{
+	"menu":
+	{
+		"couleur": "fonce",
+		"contexte":
+		{
+			"bouton": true,
+			"titre": "Skelapp",
+			"icone": "☰",
+			"action": "derouler_navigation()"
+		},
+	"items":
+		[
+			{
+			"icone": "<i class='icon-liste'></i>",
+			"legende": "Exercices",
+			"lien": "#!liste/exercices"
+			}
+		],
+	"actions":
+		[
+			{
+			"bouton": false,
+			"icone": "<i class='icon-aide'></i>",
+			"legende": "Aide",
+			"lien": "#!aide"
+			},
+			{
+			"bouton": false,
+			"icone": "<i class='icon-profil'></i>",
+			"legende": "Profil",
+			"lien": "#!profil"
+			}
+		]
+	}
+}

@@ -1,0 +1,58 @@
+<!-- ==================================
+ *            skelapp                   *
+ * ==================================== *
+ * (c)2021 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+<!-- Template : mentions légales
+  mentionsTemplate.hbs
+ -->
+
+<!-- Bouton de partage conditionnel : nécessite l'API Web share
+sur le client concerné -->
+   <div class="w3-container w3-padding">
+		<div class="w3-card">
+		<header class="w3-padding analogue">
+		<h3>Mentions légales</h3>
+        </header>
+
+		<div class="w3-container">
+		<h3 class="texte-fonce">{{ titre }}</h3>
+  	 	<p class="mention"><b>
+  	 	{{capitalisePremiereLettre exercice}} proposé par </b>{{ prof }}.
+		</p>
+		<p class="mention"><b>
+  	 	Licence :</b></p>
+  	 	<p class="w3-hide-small"><span xmlns:dct="http://purl.org/dc/terms/" 
+  	 	href="http://purl.org/dc/dcmitype/Dataset" property="dct:title" rel="dct:type">
+  	 	Cet {{exercice}}</span> est mis à disposition selon les termes de la licence internationale 
+  	 	<a rel="license" 
+  	 	href="http://creativecommons.org/licenses/by-nc/4.0/"
+  	 	target="_blank"
+  	 	class="w3-button">
+  	 	Creative Commons - 
+  	 	</a>  Attribution - 
+  	 	Pas d’Utilisation Commerciale 4.0. 
+		<p class="w3-center">
+		<a 
+		xmlns:cc="http://creativecommons.org/ns#" 
+  	 	property="cc:attributionName" 
+  	 	rel="cc:attributionURL" 
+  	 	target="_blank"
+  	 	class="w3-button"
+		href="http://creativecommons.org/licenses/by-nc/4.0/">
+  	 	<img alt="Licence Creative Commons" 
+  	 	style="border-width:0" 
+  	 	src="./static/images/ccbync.jpg" />
+  	 	</a>
+		</p>
+  	 	
+  	 	</p>
+  	 	<p class="mention w3-hide-small" ><b>Lien :</b> 
+  	 	<span id="lienExercice">
+  	 	https://pcardona34.github.io/{{app_name}}/#!{{cible}}/{{did}}</span></p>
+		</div>
+        </div>
+</div>

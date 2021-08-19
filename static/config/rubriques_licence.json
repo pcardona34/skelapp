@@ -1,0 +1,13 @@
+{
+	"rubriques":
+		[
+			{ 
+			"lien": "page1",
+			"legende": "1"
+			},
+			{
+			"lien": "page2",
+			"legende": "2"
+			}
+		]
+}

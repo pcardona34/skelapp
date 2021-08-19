@@ -1,0 +1,1 @@
+This folder is just for building before app.js is minified.

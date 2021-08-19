@@ -1,0 +1,50 @@
+<!-- ==================================
+  *            skelapp                  *
+ * ==================================== *
+ * (c)2012-2020 - Patrick Cardona       *
+ * Licence GPL version 3 ou ultérieure  *
+ * VOIR la licence complète à la racine *
+ * ==================================== -->
+
+<!-- Template : licence : contenu paginé
+  licenceTemplate.hbs
+-->
+
+<!-- Onglets / tabs -->
+
+<div class="w3-padding">
+<div class="w3-center" style="max-width: 400px">
+<div class="w3-bar">
+{{#each rubs}}
+  <button class="w3-bar-item w3-button w3-border tablink 
+  {{#if @first}}
+  triadic
+  {{/if}}
+  " onclick="afficheRubrique(event, '{{lien}}')">{{legende}} 
+  </button>
+{{/each}}
+</div>
+</div>
+</div>
+
+<div id="page1" class="rubrique">
+<div class="w3-container">
+  <div style="max-width: 400px">
+    <p style="text-align: justify">
+      Copyright &copy; {{ debut }}-{{ actuel }} {{ auteur }}<br><br>
+      {{{texte_page_1}}}.</p>
+  </div>
+</div>
+</div>
+
+<div id="page2" class="rubrique" style="display: none">
+<div class="w3-container">
+  <div style="max-width: 400px">
+    <p style="text-align: justify">
+      {{{texte_page_2}}}.</p>
+  </div>
+</div>
+</div>
+
+</div>
+
