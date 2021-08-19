@@ -2,7 +2,6 @@
 	"description": "Messages de l'interface",
 	"msg": 
 	{
-		"bienvenue": "Bienvenue dans votre application !",
-		"consigneExercice": "D'abord, écoutez la dictée <span class='texte-lien'>(<i class='icon-ecouteurs'></i>)</span> et notez-la au brouillon."
+		"bienvenue": "Bienvenue dans votre application !"
 	}
 }

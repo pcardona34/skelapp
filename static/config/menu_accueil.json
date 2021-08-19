@@ -5,7 +5,7 @@
 		"contexte":
 		{
 			"bouton": true,
-			"titre": "Skelapp",
+			"titre": "_mon_application_",
 			"icone": "☰",
 			"action": "derouler_navigation()"
 		},

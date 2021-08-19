@@ -1,5 +1,12 @@
 [
 	{
+		"appname": "Modèle d'application (PWA) : Skelapp",
+		"auteur": "Patrick Cardona",
+		"site": "http://browserify.org/",
+		"licence": "GPL-3",
+		"code": "https://github.com/pcardona34/skelapp"
+	},
+	{
 		"appname": "Agrégateur de scripts (bundle) : Browserify",
 		"auteur": "Browserify.org",
 		"site": "http://browserify.org/",

@@ -1,12 +1,12 @@
 {
-  "name": "skelapp, modèle d'application",
-  "short_name": "skelapp",
+  "name": "_mon_application_",
+  "short_name": "_mon_application_",
   "start_url": ".",
   "display": "fullscreen",
   "background_color": "#fff",
   "theme_color": "#000",
   "orientation": "portrait",
-  "description": "exerciseur",
+  "description": "_description_",
   "categories": ["education"],
   "scope": ".",
   "icons": [{

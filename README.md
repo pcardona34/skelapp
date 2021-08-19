@@ -60,11 +60,12 @@ Maintenant que le gestionnaire npm est disponible, vous devez aussi installer :
 
     git clone https://github.com/pcardona34/skelapp/
     cd skelapp
+    bash ./adapter.sh
     npm install
 
 ### Installation de votre logo
 
-Copiez votre logo au format JPEG, nommé logo.jpg dans le sous-dossier darkroom.
+Copiez votre logo au format JPEG, nommé `logo.jpg` dans le sous-dossier `darkroom`.
 Pour générer les images de votre projet, exécutez :
 
     npm run logo

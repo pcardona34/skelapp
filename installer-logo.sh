@@ -4,9 +4,9 @@
 
 # Chemin absolu vers le dossier chambre noire
 # Adaptez-le à votre contexte
-PROJET="$1"
-IMAGES=$HOME/MES_SITES/pcardona34_github_io/${PROJET}/darkroom
-CIBLE=$HOME/MES_SITES/pcardona34_github_io/${PROJET}
+
+IMAGES=./darkroom
+CIBLE=.
 
 # On vérifie ce dossier
 if [[ -d $IMAGES ]];then
@@ -55,4 +55,9 @@ mv "$IMAGES/favicon.ico" "$CIBLE"
 find $IMAGES -iname "*.ico" -exec rm \{} \;
 find $IMAGES -iname "*.jpg" -exec rm \{} \;
 mv $IMAGES/$LOGO.save $IMAGES/$LOGO.jpg
+
+# Crédits
+echo "Il faut mettre à jour les informations (crédits) sur ce logo..."
+sleep 2
+nano "$CIBLE/static/config/credit.json"
 

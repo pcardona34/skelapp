@@ -1,7 +1,7 @@
 {
-  "name": "skelapp",
+  "name": "_mon_application_",
   "version": "1.0.0",
-  "description": "Modèle PWA",
+  "description": "_description_",
   "main": "build/app.js",
   "directories": {
     "lib": "lib"

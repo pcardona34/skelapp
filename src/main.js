@@ -1,5 +1,5 @@
 /* ==================================== *
- *            skelapp                   *
+ *    Une application skelapp           *
  * ==================================== *
  * (c)2021 - Patrick Cardona       *
  * Licence GPL version 3 ou ultérieure  *
@@ -19,8 +19,15 @@
 /*jslint browser: true*/
 /*global window*/
 
-/* VERSION */
+/* NOM et VERSION */
 const versionApp = require('../package.json').version;
+const app_name = require('../package.json').name;
+const description = require('../package.json').description;
+
+/* Crédit logo */
+const origine_logo = require('../static/config/credit.json').origine;
+const url_logo = require('../static/config/credit.json').url;
+const credit_logo = require('../static/config/credit.json').credit;
 
 /* Messages de l'interface */
 const MSG = require('../static/config/messages.json').msg;
@@ -127,12 +134,10 @@ const menuListeTemplate = require("./menus/menuListeTemplate.hbs");
 Handlebars.registerPartial("apropos", require("./composants/aproposTemplate.hbs"));
 
 /* Licence */
-Handlebars.registerPartial("licence",
-require("./composants/licenceTemplate.hbs"));
+Handlebars.registerPartial("licence", require("./composants/licenceTemplate.hbs"));
 
 /* Section de l'aide : prise en main */
-Handlebars.registerPartial("prise_en_main",
-require("./aides/aidePriseEnMain.hbs"));
+Handlebars.registerPartial("prise_en_main", require("./aides/aidePriseEnMain.hbs"));
 
 
 /* ========================================
@@ -238,10 +243,14 @@ const dataMenuConsigneExercice = require("../static/config/menu_consigne_exercic
     let moduleJSONdata = require ('../static/config/apropos.json');
     let rubriquesJSONdataApropos = require ('../static/config/rubriques_apropos.json').rubriques;
     let modeleApropos = {
-	  'app_name': 'Skelapp',
+	  'app_name': app_name,
+	  'description': description,
 	  'module': moduleJSONdata,
 	  'rubs': rubriquesJSONdataApropos,
-	  'version': versionApp
+	  'version': versionApp,
+	  'credit': credit_logo,
+	  'url': url_logo,
+	  'origine': origine_logo
     };
 /* Données du modèle Licence (partial appelé dans le template Aide) */
     let dataLicence = require("../static/config/licence.json").licence;
@@ -272,7 +281,7 @@ const dataMenuConsigneExercice = require("../static/config/menu_consigne_exercic
   */
 
 /* Déclaration du routage */
-var root = "/skelapp/";
+var root = "/" + app_name + "/";
 var useHash = true;
 var hash = '#!';
 var router = new Navigo(root, useHash, hash);

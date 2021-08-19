@@ -1,5 +1,5 @@
 /* ==================================== *
- *            skelapp           *
+ *      Une application Skelapp         *
  * ==================================== *
  * (c)2021 - Patrick Cardona       *
  * Licence GPL version 3 ou ultérieure  *
@@ -10,7 +10,7 @@
 
 /* ===========================================
  *      A i d e    g é n é r a l e
- *      dans skelapp
+ *      de l'application
  * ===========================================
  */
 
