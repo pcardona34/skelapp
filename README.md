@@ -91,7 +91,7 @@ Pour générer les images de votre projet, exécutez :
 + Il faut notamment placer la structure de votre exercice dans la page `exerciceTemplate.hbs` et adapter le code de la section de routage dans `main.js` en conséquence : section "Routage > Page du contexte Exécution de l'Exercice". Au besoin, consultez la documentation des templates [Handlebars](https://handlebarsjs.com/).
 
 + La logique de l'exercice doit être traitée dans le script : `src/lib/scripts/exerciceModule.js`.
-+ Les surcharges du style doivent se trouver dans le fichier `src/lib/styles/exercices`. Notez que le modèle Skelapp est lui-même fondé sur la bibliothèque [W3CSS](https://www.w3schools.com/w3css/w3css_references.asp).
++ Les surcharges du style doivent se trouver dans le fichier `src/lib/styles/exercice.css`. Notez que le modèle Skelapp est lui-même fondé sur la bibliothèque [W3CSS](https://www.w3schools.com/w3css/w3css_references.asp).
 
 Pour arrêter le serveur de développement :
 
@@ -110,7 +110,7 @@ modèles au format [JSON](https://www.json.org/json-en.html) : `exercicex.json` 
 
 ### La première fois seulement
 
-+ Pour créer une version minifiée des bibliothèques css et javascript 
+Pour créer une version minifiée des bibliothèques css et javascript 
 externes. Il s'agit notamment des styles fournis par 
 w3school, ainsi que la police d'icones IcoMoon.
 
