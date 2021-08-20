@@ -23,9 +23,8 @@ sera vue comme une application à part entière.
 
 ### Prérequis
 
-+ Vous devez disposer d'un environnement de développement approprié 
-(station de travail GNU/linux, Mac OS ou Windows avec les 
-outils de développement activés : notamment l'interpréteur de commandes 
+Vous devez disposer d'un environnement de développement approprié 
+avec les outils de développement activés : notamment l'interpréteur de commandes 
 (shell) Bash. Vérifiez la présence de ces outils en ouvrant une console 
 et en affichant leur version, sinon il faudra les installer.
 
@@ -35,12 +34,14 @@ et en affichant leur version, sinon il faudra les installer.
     git --version;
     display --version
 
-+ Pour les installer : Bash est présent sur GNU/Linux et Mac OS. 
+Pour les installer : 
+
++ Bash est présent sur GNU/Linux et Mac OS. 
 [bash: sous Windows 10](https://korben.info/installer-shell-bash-linux-windows-10.html), 
-[node](https://nodejs.dev/how-to-install-nodejs), 
-[npm](https://www.npmjs.com/get-npm) sera installé avec nodejs, 
-[git](https://git-scm.com),
-[ImageMagick](https://imagemagick.org/)
++ [node](https://nodejs.dev/how-to-install-nodejs), 
++ [npm](https://www.npmjs.com/get-npm) sera installé avec nodejs,
++ [git](https://git-scm.com),
++ [ImageMagick](https://imagemagick.org/)
 
 Maintenant que le gestionnaire npm est disponible, vous devez aussi installer :
 
