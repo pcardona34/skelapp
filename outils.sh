@@ -46,6 +46,7 @@ browserify src/main.js -t hbsfy -o build/app.js;
 echo "Done."
 echo "Cleaning and minifying CSS : lib"
 echo "- app.css" && cleancss -o public/lib/styles/app.min.css src/lib/styles/app.css;
+echo "- exercice.css" && cleancss -o public/lib/styles/exercice.min.css src/lib/styles/exercice.css;
 echo "Minifying JS..."
 echo "- main app bundle..." && jsmin -o public/app.min.js build/app.js;
 echo "All is done !";

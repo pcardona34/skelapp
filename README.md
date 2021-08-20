@@ -58,14 +58,22 @@ Maintenant que le gestionnaire npm est disponible, vous devez aussi installer :
 
 ### Première installation de la fabrique
 
-    git clone https://github.com/pcardona34/skelapp/
-    cd skelapp
+Pour créer un nouveau projet à base de Skelapp :
+
+    git clone https://github.com/pcardona34/skelapp/ mon_projet
+    cd mon_projet
+
+Pour personnaliser le modèle : nom, description...
+
     bash ./adapter.sh
+
+Pour installer les dépendances :
+
     npm install
 
 ### Installation de votre logo
 
-Copiez votre logo au format JPEG, nommé `logo.jpg` dans le sous-dossier `darkroom`.
+Copiez votre logo au format JPEG, nommé impérativement `logo.jpg` dans le sous-dossier `darkroom`.
 Pour générer les images de votre projet, exécutez :
 
     npm run logo
@@ -79,15 +87,22 @@ Pour générer les images de votre projet, exécutez :
     http://127.0.0.1:9966/
 
 + Pour une personnalisation avancée, le code à adapter à vos besoins se situe dans les dossiers  
-`src` et `src/lib`. Il faut notamment placer la structure de votre exercice dans la page `exerciceTemplate.hbs` et adapter le code de la section de routage dans `main.js` en conséquence.
-+ Pour arrêter le serveur de développement : `Ctrl + C`
+`src` et `src/lib`.
++ Il faut notamment placer la structure de votre exercice dans la page `exerciceTemplate.hbs` et adapter le code de la section de routage dans `main.js` en conséquence : section "Routage > Page du contexte Exécution de l'Exercice". Au besoin, consultez la documentation des templates [Handlebars](https://handlebarsjs.com/).
+
++ La logique de l'exercice doit être traitée dans le script : `src/lib/scripts/exerciceModule.js`.
++ Les surcharges du style doivent se trouver dans le fichier `src/lib/styles/exercices`. Notez que le modèle Skelapp est lui-même fondé sur la bibliothèque [W3CSS](https://www.w3schools.com/w3css/w3css_references.asp).
+
+Pour arrêter le serveur de développement :
+
+    Ctrl + C
 
 ### Pour ajouter de nouveaux exercices
 
 + Pour ajouter de nouveaux exercices : respectez les 
-modèles au format JSON `exercicex.json` (exercice x) puis déposez ces nouvelles données dans `static/data`.
-+ Pensez aussi à actualiser en conséquence la liste des exercices, en adaptant le contenu du fichier `liste_exercices.json` au 
-format JSON dans le dossier `static/config`.
+modèles au format [JSON](https://www.json.org/json-en.html) : `exercicex.json` (exercice x) et adaptez en conséquence `exerciceTemplate.hbs` et `src/lib/scripts/exerciceModule.js`.
++ Puis déposez ces nouvelles données dans `static/data`.
++ Pensez aussi à actualiser en conséquence la liste des exercices, en adaptant le contenu du fichier `liste_exercices.json` dans le dossier `static/config`.
 
 ## Pour préparer une version de production
 
