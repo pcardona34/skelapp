@@ -345,14 +345,11 @@ var router = new Navigo(root, useHash, hash);
 		console.log("Erreur: "+ err);
     });
 
-
-	
     dataMenuAccueilExercice.did = params.id;
     dataMenuAccueilExercice.exercice = 'exercice';
     dataMenuAccueilExercice.actionsMobile = [].slice.call(dataMenuAccueilExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuAccueilExercice);
 	menu.html(menuD);
-	app.html(html);
 	},
 
 /* =================================================
@@ -385,14 +382,11 @@ var router = new Navigo(root, useHash, hash);
 		console.log("Erreur: "+ err);
     });
 
-
-	
     dataMenuExercice.did = params.id;
     dataMenuExercice.exercice = 'exercice';
     dataMenuExercice.actionsMobile = [].slice.call(dataMenuExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuExercice);
 	menu.html(menuD);
-	app.html(html);
 	},
 
  /* ---------------------------------------------
@@ -480,7 +474,6 @@ var router = new Navigo(root, useHash, hash);
     dataMenuConsigneExercice.actionsMobile = [].slice.call(dataMenuConsigneExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuConsigneExercice);
 	menu.html(menuD);
-	app.html(html);
 	},
 
 
