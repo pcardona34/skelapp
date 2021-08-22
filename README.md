@@ -3,30 +3,27 @@
 Modèle d'application pour un exerciseur.
 (c) 2021 - Patrick Cardona
 
-Ce modèle permet de lister les exercices, de les filtrer par nom ou par niveau (notion de profil).
-Le contexte de sélection et d'exécution de l'exercice permet de le lier avec des mentions légales et avec la consigne.
++ Ce modèle permet de lister les exercices, de les filtrer par nom ou par niveau (notion de profil).
+Le contexte de sélection et d'exécution de l'exercice permet de le lier avec des mentions légales ainsi que la consigne.
 Il permet également la gestion des liens de licence et autres mentions de type à-propos...
-Bien entendu, il vous faut encore développer la partie propre à l'exercice lui-même.
-Pour vous faire une idée d'une application complète fondée sur Skelapp, voyez l'exemple de [ejDicto](https://github.com/pcardona34/ejdicto)
+Bien entendu, il vous faut encore développer la partie propre à l'exercice lui-même. Voir cette section.
+
++ Pour vous faire une idée d'une application complète fondée sur Skelapp, voyez l'exemple de [ejDicto](https://github.com/pcardona34/ejdicto)
 
 ## Usages mobiles
 
 + Cette application est capable de s'adapter aux usages mobiles.
-+ L'installation et le fonctionnement de l'application Web progressive (PWA) ont été testés avec succès 
- dans un environnement *Androïd*. Cette version est adaptative et intègre des fonctionnalités 
++ Notamment l'installation et le fonctionnement de l'application Web progressive (PWA) ont été testés avec succès 
+  + dans un environnement *Androïd*. Cette version est adaptative et intègre des fonctionnalités 
  propres à l'usage mobile comme le partage.
-+ Son installation est automatiquement proposée quand on affiche la page d'accueil du site dans le 
-navigateur *Chrome* pour *Androïd*. Elle disposera alors d'une icône et 
-sera vue comme une application à part entière.
+  + Son installation est automatiquement proposée quand on affiche la page d'accueil du site dans le 
+navigateur *Chrome* pour *Androïd*. Elle disposera alors d'une icône et sera vue comme une application à part entière.
 
 ## Pour adapter le logiciel à vos besoins
 
 ### Prérequis
 
-Vous devez disposer d'un environnement de développement approprié 
-avec les outils de développement activés : notamment l'interpréteur de commandes 
-(shell) Bash. Vérifiez la présence de ces outils en ouvrant une console 
-et en affichant leur version, sinon il faudra les installer.
+Vous devez disposer d'un environnement de développement approprié avec les outils de développement activés: notamment l'interpréteur de commandes (shell) *Bash*. Vérifiez la présence de ces outils en ouvrant une console ou un terminal et en affichant leur version, sinon il faudra les installer.
 
     bash --version;
     node --version;
@@ -34,9 +31,9 @@ et en affichant leur version, sinon il faudra les installer.
     git --version;
     display --version
 
-Pour les installer : 
+Pour les installer respectivement : 
 
-+ Bash est présent sur GNU/Linux et Mac OS. 
++ Bash est déjà présent sur GNU/Linux et Mac OS. 
 [bash: sous Windows 10](https://korben.info/installer-shell-bash-linux-windows-10.html), 
 + [node](https://nodejs.dev/how-to-install-nodejs), 
 + [npm](https://www.npmjs.com/get-npm) sera installé avec nodejs,
@@ -55,7 +52,7 @@ Maintenant que le gestionnaire npm est disponible, vous devez aussi installer :
     sudo npm install -g budo
     sudo npm install clean-css-cli -g
 
-+ Parfait ! Vous pouvez passer à l'installation de la fabrique.
++ Parfait ! Vous pouvez passer à l'installation de la fabrique de votre application.
 
 ### Première installation de la fabrique
 
@@ -64,7 +61,7 @@ Pour créer un nouveau projet à base de Skelapp :
     git clone https://github.com/pcardona34/skelapp/ mon_projet
     cd mon_projet
 
-Pour personnaliser le modèle : nom, description...
+Pour personnaliser le modèle : *nom, description...*
 
     bash ./adapter.sh
 
@@ -74,10 +71,23 @@ Pour installer les dépendances :
 
 ### Installation de votre logo
 
-Copiez votre logo au format JPEG, nommé impérativement `logo.jpg` dans le sous-dossier `darkroom`.
+Copiez votre logo au format JPEG, nommé impérativement `logo.jpg`, dans le sous-dossier `darkroom`.
 Pour générer les images de votre projet, exécutez :
 
     npm run logo
+ 
+### Personnalisation des icônes
+
+Si vous souhaitez ajouter des icônes à votre application:
+
+#. Importez le fichier `vendor/icomoon/selection.json` dans un projet de [l'application Icomoon](https://icomoon.io/app)...
+#. Ajoutez les icônes nécessaires dans l'onglet de `Selection`.
+#. Puis générez la police d'icônes dans l'onglet `Generate Font`.
+#. Téléchargez la police obtenue en cliquant sur le bouton  \[Download\].
+#. Décompressez l'archive ZIP `icomoon(...).zip` dans un dossier temporaire et copiez dans `vendor/icomoon`:
+
++ Les fichiers de style et de sélection: `selection.json` et `style.css`,
++ Ainsi que le dossier `fonts`.
 
 ### Pour exécuter le serveur de développement
 
@@ -104,6 +114,11 @@ Pour arrêter le serveur de développement :
 modèles au format [JSON](https://www.json.org/json-en.html) : `exercicex.json` (exercice x) et adaptez en conséquence `exerciceTemplate.hbs` et `src/lib/scripts/exerciceModule.js`.
 + Puis déposez ces nouvelles données dans `static/data`.
 + Pensez aussi à actualiser en conséquence la liste des exercices, en adaptant le contenu du fichier `liste_exercices.json` dans le dossier `static/config`.
++ Selon les niveaux envisagés, modifiez aussi `static/config/niveaux.jon`.
+
+### Adaptation de l'aide
+
+Il est vraisembable que vous deviez adapter l'aide, notamment la section de *Prise en main* en ajoutant des lignes au tableau de la sous-page : `src/aides/aidePriseEnMain.hbs`.
 
 ## Pour préparer une version de production
 

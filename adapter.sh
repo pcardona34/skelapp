@@ -1,11 +1,14 @@
 #!/user/bin/env bash
 # Personnalise le modèle Skelapp avec le npm de l'application, etc.
 
-MENU_ACCUEIL=./static/config/menu_accueil.json
+INDEX_DEV=index_dev.html
+INDEX_PWA=index_pwa.html
 MANIFEST=manifest.webmanifest
+MENU_ACCUEIL=./static/config/menu_accueil.json
 OFFLINE=offline.html
 PACKAGE=package.json
 ROBOTS=robots.txt
+
 
 # On récupère les données à adapter
 echo "Nom de votre application (un mot unique, en minuscules, sans accents):"
@@ -34,7 +37,7 @@ esac
 
 # On applique les changements...
 
-for fic in ${MENU_ACCUEIL} ${MANIFEST} ${OFFLINE} ${PACKAGE} ${ROBOTS}
+for fic in ${INDEX_DEV} ${INDEX_PWA} ${MANIFEST} ${MENU_ACCUEIL} ${OFFLINE} ${PACKAGE} ${ROBOTS}
 do
 	if [[ -f $fic ]];then
 		cat $fic|sed s/_mon_application_/"${NOM_APP}"/|sed s/_description_/"${DESC_APP}"/>${fic}_subst.txt
