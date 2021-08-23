@@ -80,14 +80,14 @@ Pour générer les images de votre projet, exécutez :
 
 Si vous souhaitez ajouter des icônes à votre application:
 
-#. Importez le fichier `vendor/icomoon/selection.json` dans un projet de [l'application Icomoon](https://icomoon.io/app)...
-#. Ajoutez les icônes nécessaires dans l'onglet de `Selection`.
-#. Puis générez la police d'icônes dans l'onglet `Generate Font`.
-#. Téléchargez la police obtenue en cliquant sur le bouton  \[Download\].
-#. Décompressez l'archive ZIP `icomoon(...).zip` dans un dossier temporaire et copiez dans `vendor/icomoon`:
+1. Importez le fichier `vendor/icomoon/selection.json` dans un projet de [l'application Icomoon](https://icomoon.io/app)...
+2. Ajoutez les icônes nécessaires dans l'onglet de `Selection`.
+3. Puis générez la police d'icônes dans l'onglet `Generate Font`.
+4. Téléchargez la police obtenue en cliquant sur le bouton  \[Download\].
+5. Décompressez l'archive ZIP `icomoon(...).zip` dans un dossier temporaire et copiez dans `vendor/icomoon`:
 
-+ Les fichiers de style et de sélection: `selection.json` et `style.css`,
-+ Ainsi que le dossier `fonts`.
+  + Les fichiers de style et de sélection: `selection.json` et `style.css`,
+  + Ainsi que le dossier `fonts`.
 
 ### Pour exécuter le serveur de développement
 
