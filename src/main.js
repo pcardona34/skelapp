@@ -286,6 +286,21 @@ var useHash = true;
 var hash = '#!';
 var router = new Navigo(root, useHash, hash);
 
+/* =============================
+ * ===   Route inconnue ===
+ * ============================
+ */
+router.notFound(function () {
+ const html = erreurTemplate({
+ couleur: 'yellow',
+ titre: 'Erreur 404 - Page introuvable !',
+ message: 'Ce chemin n\'existe pas.'
+    });
+ menu.html(menuAccueil)
+ app.html(html);
+  });
+
+
 
 /* Autres routes */
  router.on({
@@ -380,11 +395,11 @@ var router = new Navigo(root, useHash, hash);
 	/* On gère l'échec de la récupération des données. */
 	}).catch((err) => {
 		console.log("Erreur: "+ err);
-    });
+	});
 
-    dataMenuExercice.did = params.id;
-    dataMenuExercice.exercice = 'exercice';
-    dataMenuExercice.actionsMobile = [].slice.call(dataMenuExercice.actions).reverse();
+	dataMenuExercice.did = params.id;
+	dataMenuExercice.exercice = 'exercice';
+	dataMenuExercice.actionsMobile = [].slice.call(dataMenuExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuExercice);
 	menu.html(menuD);
 	},
@@ -424,7 +439,7 @@ var router = new Navigo(root, useHash, hash);
 	/* On gère l'échec de la récupération des données. */
 	}).catch((err) => {
 		console.log("Erreur: "+ err);
-    });
+	});
 	/* On crée et on affiche le menu lié au contexte Exercice 
 	 * Même modèle que celui de la dictée
 	 */
@@ -505,11 +520,11 @@ var router = new Navigo(root, useHash, hash);
     },
 
   /* =========================
-   * === Chemin générique ===
+   * === home ===
    * =========================
    */
 
-  '*': function() {
+  '': function() {
   let html = accueilTemplate({"bienvenue": MSG.bienvenue});
   app.html(html);
   app.htmlAppend(piedDePage);
@@ -521,36 +536,7 @@ var router = new Navigo(root, useHash, hash);
   /* Résolution de la route */
 }).resolve();
 
-
- /* ===========================
-  * === Page d'accueil ===
-  * ===========================
-  */
- router.on(function () {
- let html = accueilTemplate({"bienvenue": "Bienvenue dans votre application !"});
- app.html(html);
- menu.html(menuAccueil);
- sessionStorage.clear();
- }).resolve();
-
-
-/* =============================
- * ===   Route inconnue ===
- * ============================
- */
-router.notFound(function () {
- const html = erreurTemplate({
- couleur: 'yellow',
- titre: 'Erreur 404 - Page introuvable !',
- message: 'Ce chemin n\'existe pas.'
-    });
- menu.html(menuAccueil)
- app.html(html);
-  });
-
 /* Fin table de routage */
-
-
 
 }); /* Fin de event load */
 

@@ -7,7 +7,7 @@
     			"bouton": false,
     			"titre": "Choix",
     			"icone": "<i class='icon-retourner'></i>",
-    			"action": "#!/liste/exercices"
+    			"action": "#!liste/exercices"
 			},
 			"items": [],
 			"actions":
@@ -16,14 +16,14 @@
 				"bouton": false,
     				"icone": "<i class='icon-plume'></i>",
     				"legende": "Effectuer cet exercice",
-    				"lien": "#!/effectuer/exercice"
+    				"lien": "#!effectuer/exercice"
     				},
 				{
 				"bouton": false,
     				"icone": "<i class='icon-info'></i>",
     				"legende": "Mentions légales",
-    				"lien": "#!/mentions/exercice"
-    				},
+    				"lien": "#!mentions/exercice"
+    				}
 			]
 		}
 }
