@@ -70,11 +70,23 @@ Handlebars.registerHelper("interpreteNiveau", function (sChiffre) {
     let niveau = "";
     let etalon = sChiffre;
     switch(etalon) {
+  case "6":
+    niveau = "Sixième";
+    break;
   case "5":
     niveau = "Cinquième";
     break;
+  case "4":
+    niveau = "Quatrième";
+    break;
   case "3":
     niveau = "Troisième";
+    break;
+  case "2":
+    niveau = "Seconde";
+    break;
+  case "1":
+    niveau = "Première";
     break;
   default:
     return "Tous";
@@ -187,13 +199,13 @@ const zone_notification = notificationTemplate();
  * =========================================================
  */
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
  /* Zones cibles */
-const menu = $('#menu');
-const app = $('#app');
+const menu = $("#menu");
+const app = $("#app");
 const aide = $("#aide");
 const notification = $("#notification"); 
-const piedDePage = piedDePageTemplate({'version': versionApp});
+const piedDePage = piedDePageTemplate({"version": versionApp});
 
 /* ==================================================
  *                 * MENUS *
@@ -240,17 +252,17 @@ const dataMenuConsigneExercice = require("../static/config/menu_consigne_exercic
  */
  
  /* Données du modèle Apropos (partial appelé dans le template Aide) */
-    let moduleJSONdata = require ('../static/config/apropos.json');
-    let rubriquesJSONdataApropos = require ('../static/config/rubriques_apropos.json').rubriques;
+    let moduleJSONdata = require ("../static/config/apropos.json");
+    let rubriquesJSONdataApropos = require ("../static/config/rubriques_apropos.json").rubriques;
     let modeleApropos = {
-	  'app_name': app_name,
-	  'description': description,
-	  'module': moduleJSONdata,
-	  'rubs': rubriquesJSONdataApropos,
-	  'version': versionApp,
-	  'credit': credit_logo,
-	  'url': url_logo,
-	  'origine': origine_logo
+	  "app_name": app_name,
+	  "description": description,
+	  "module": moduleJSONdata,
+	  "rubs": rubriquesJSONdataApropos,
+	  "version": versionApp,
+	  "credit": credit_logo,
+	  "url": url_logo,
+	  "origine": origine_logo
     };
 /* Données du modèle Licence (partial appelé dans le template Aide) */
     let dataLicence = require("../static/config/licence.json").licence;
@@ -260,16 +272,16 @@ const dataMenuConsigneExercice = require("../static/config/menu_consigne_exercic
     let now = new Date();
 	let actuel = now.getFullYear();
     let modeleLicence = {
-      'debut': dataLicence.debut,
-	  'actuel': actuel,
-	  'auteur': dataLicence.auteur,
-	  'texte_page_1': texte_page_1,
-	  'texte_page_2': texte_page_2,
+      "debut": dataLicence.debut,
+	  "actuel": actuel,
+	  "auteur": dataLicence.auteur,
+	  "texte_page_1": texte_page_1,
+	  "texte_page_2": texte_page_2,
 	  "rubs": rubriquesJSONdataLicence
     };
   let contenu = {
-    'modeleApropos': modeleApropos,
-    'modeleLicence': modeleLicence
+    "modeleApropos": modeleApropos,
+    "modeleLicence": modeleLicence
   }
   const SommaireAide = aideTemplate(contenu);
   
@@ -292,49 +304,44 @@ var router = new Navigo(root, useHash, hash);
  */
 router.notFound(function () {
  const html = erreurTemplate({
- couleur: 'yellow',
- titre: 'Erreur 404 - Page introuvable !',
- message: 'Ce chemin n\'existe pas.'
+ couleur: "yellow",
+ titre: "Erreur 404 - Page introuvable !",
+ message: "Ce chemin n\'existe pas."
     });
- menu.html(menuAccueil)
+ menu.html(menuAccueil);
  app.html(html);
   });
 
-
-
 /* Autres routes */
- router.on({
+router.on({
 
  /* === Aide === */
- 'aide': function () {
+ "aide": function () {
   app.html(SommaireAide);
   menu.html(menuAide);
   },
 
-
  /* === Liste des exercices === */
-    'liste/exercices': function () {
-    let niveau = profil.retourne("appProfilNiveau",0)
-	let JSONdata = require('../static/config/liste_exercices.json');
+ "liste/exercices": function () {
+    let niveau = profil.retourne("appProfilNiveau",0);
+	let JSONdata = require("../static/config/liste_exercices.json");
 	let contenu = {
-		'info': JSONdata,
-		'exercice': 'exercice',
-		'cible': 'exercice',
-		'niveau': niveau
-		}
+		"info": JSONdata,
+		"exercice": "exercice",
+		"cible": "exercice",
+		"niveau": niveau
+		};
 	let html = listeTemplate(contenu);
 	dataMenuListe.exercice = 'exercice';
 	const menuListe = menuListeTemplate(dataMenuListe);
 	menu.html(menuListe);
 	app.html(html);
 	},
-
-
 /* =================================================
 	=== Page du contexte Accueil Exercice 
    =================================================*/
     /* un exercice a été choisi => id -> did */
-    'exercice/:id': function (params) {
+ "choix/exercice/:id": function (params) {
     fetch("./static/data/exercice" + params.id + ".json")
         .then((response) => {
           return response.json();
@@ -347,9 +354,9 @@ router.notFound(function () {
 		    /* Les données récupérées à partir 
 		     * du fichier exercice + id + .json :
 		     */
-			contenu.exercice = 'exercice';
-			contenu.cible = 'exercice';
-			contenu.consigne = data.consigne
+			contenu.exercice = "exercice";
+			contenu.cible = "exercice";
+			contenu.consigne = data.consigne;
 		    /* On crée le contenu de la zone de mentions */
 		    let html = accueilExerciceTemplate(contenu);
 		    /* On l'intègre dans le document */
@@ -360,9 +367,9 @@ router.notFound(function () {
 		console.log("Erreur: "+ err);
     });
 
-    dataMenuAccueilExercice.did = params.id;
-    dataMenuAccueilExercice.exercice = 'exercice';
-    dataMenuAccueilExercice.actionsMobile = [].slice.call(dataMenuAccueilExercice.actions).reverse();
+	dataMenuAccueilExercice.did = params.id;
+	dataMenuAccueilExercice.exercice = "exercice";
+	dataMenuAccueilExercice.actionsMobile = [].slice.call(dataMenuAccueilExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuAccueilExercice);
 	menu.html(menuD);
 	},
@@ -371,7 +378,7 @@ router.notFound(function () {
 	=== Page du contexte Exécution de l'Exercice 
    =================================================*/
     /* L'exercice choisi est exécuté => id -> did */
-    'effectuer/exercice/:id': function (params) {
+ "effectuer/exercice/:id": function (params) {
     fetch("./static/data/exercice" + params.id + ".json")
         .then((response) => {
           return response.json();
@@ -384,11 +391,14 @@ router.notFound(function () {
 		    /* Les données récupérées à partir 
 		     * du fichier exercice + id + .json :
 		     */
-			contenu.exercice = 'exercice';
-			contenu.cible = 'exercice';
+			contenu.exercice = "exercice";
+			contenu.cible = "exercice";
 			contenu.titre = data.titre;
+			contenu.series = data.series;
 		    /* On crée le contenu de la zone d'exécution */
 		    let html = exerciceTemplate(contenu);
+		    exercice.init(contenu.series); 
+	            exercice.commencer();
 		    /* On l'intègre dans le document */
 		    app.html(html);
 
@@ -398,7 +408,7 @@ router.notFound(function () {
 	});
 
 	dataMenuExercice.did = params.id;
-	dataMenuExercice.exercice = 'exercice';
+	dataMenuExercice.exercice = "exercice";
 	dataMenuExercice.actionsMobile = [].slice.call(dataMenuExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuExercice);
 	menu.html(menuD);
@@ -408,8 +418,7 @@ router.notFound(function () {
   *  === Page des mentions de l'exercice courant ===
   *  --------------------------------------------
   */
-    'mentions/exercice/:id': function (params) {
-
+ "mentions/exercice/:id": function (params) {
   /* On récupère les données de l'exercice sélectionné
    *  Au format JSon et on complète ce contenu pour 
    *  Initialiser le template 'saisir_exercice...' et afficher son contenu... 
@@ -426,11 +435,11 @@ router.notFound(function () {
 		    /* Les données récupérées à partir 
 		     * du fichier dictee + id + .json :
 		     */
-			contenu.app_name= data.app_name;
+			contenu.app_name = data.app_name;
 			contenu.titre = data.titre;
 			contenu.prof = data.prof;
-			contenu.exercice = 'exercice';
-			contenu.cible = 'exercice';
+			contenu.exercice = "exercice";
+			contenu.cible = "exercice";
 		    /* On crée le contenu de la zone de mentions */
 		    let html = mentionsTemplate(contenu);
 		    /* On l'intègre dans le document */
@@ -440,23 +449,20 @@ router.notFound(function () {
 	}).catch((err) => {
 		console.log("Erreur: "+ err);
 	});
-	/* On crée et on affiche le menu lié au contexte Exercice 
-	 * Même modèle que celui de la dictée
-	 */
+	/* On crée et on affiche le menu lié au contexte Exercice */
 	dataMenuMentionsExercice.did = params.id;
-	dataMenuMentionsExercice.exercice = 'exercice';
-	dataMenuMentionsExercice.cible = 'exercice';
+	dataMenuMentionsExercice.exercice = "exercice";
+	dataMenuMentionsExercice.cible = "exercice";
 	dataMenuMentionsExercice.actionsMobile = [].slice.call(dataMenuMentionsExercice.actions).reverse();
 	let menuR = menuExerciceTemplate(dataMenuMentionsExercice);
 	menu.html(menuR);
 	},
 
-
 /* =================================================
 	=== Page de consigne de l'Exercice 
    =================================================*/
     /* L'exercice choisi => id -> did */
-    'consigne/exercice/:id': function (params) {
+ "consigne/exercice/:id": function (params) {
     fetch("./static/data/exercice" + params.id + ".json")
         .then((response) => {
           return response.json();
@@ -469,8 +475,8 @@ router.notFound(function () {
 		    /* Les données récupérées à partir 
 		     * du fichier exercice + id + .json :
 		     */
-			contenu.exercice = 'exercice';
-			contenu.cible = 'exercice';
+			contenu.exercice = "exercice";
+			contenu.cible = "exercice";
 			contenu.consigne = data.consigne;
 		    /* On crée le contenu de la zone d'exécution */
 		    let html = consigneExerciceTemplate(contenu);
@@ -480,12 +486,10 @@ router.notFound(function () {
 	/* On gère l'échec de la récupération des données. */
 	}).catch((err) => {
 		console.log("Erreur: "+ err);
-    });
-
-
+	});
 	
     dataMenuConsigneExercice.did = params.id;
-    dataMenuConsigneExercice.exercice = 'exercice';
+    dataMenuConsigneExercice.exercice = "exercice";
     dataMenuConsigneExercice.actionsMobile = [].slice.call(dataMenuConsigneExercice.actions).reverse();
 	let menuD = menuExerciceTemplate(dataMenuConsigneExercice);
 	menu.html(menuD);
@@ -496,10 +500,10 @@ router.notFound(function () {
    * === Page de gestion du profil / éventuellement modifié ===
    * =========================================================
    */
-    'profil': function(){
-    let niveau = profil.retourne('appProfilNiveau','tous');
+ "profil": function() {
+    let niveau = profil.retourne("appProfilNiveau","tous");
     let contenu = {
-      'niveau': niveau
+      "niveau": niveau
     };
     let html = profilTemplate(contenu);
     app.html(html);
@@ -510,9 +514,9 @@ router.notFound(function () {
    * === Formulaire : modification du profil ===
    * ===========================================
    */
-   'modprefs': function(){
+"modprefs": function() {
     let contenu = {
-      'niveaux': niveaux
+      "niveaux": niveaux
     };
     let html = formProfilTemplate(contenu);
     app.html(html);
@@ -524,7 +528,7 @@ router.notFound(function () {
    * =========================
    */
 
-  '': function() {
+  "": function() {
   let html = accueilTemplate({"bienvenue": MSG.bienvenue});
   app.html(html);
   app.htmlAppend(piedDePage);

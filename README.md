@@ -8,7 +8,7 @@ Le contexte de sélection et d'exécution de l'exercice permet de le lier avec d
 Il permet également la gestion des liens de licence et autres mentions de type à-propos...
 Bien entendu, il vous faut encore développer la partie propre à l'exercice lui-même. Voir cette section.
 
-+ Pour vous faire une idée d'une application complète fondée sur Skelapp, voyez l'exemple de [ejDicto](https://github.com/pcardona34/ejdicto)
++ Pour vous faire une idée d'une application complète fondée sur Skelapp, voyez les exemples de [ejDicto](https://github.com/pcardona34/ejdicto) ou [ejMemor](https://github.com/pcardona34/ejmemor)...
 
 ## Usages mobiles
 
@@ -114,7 +114,7 @@ Pour arrêter le serveur de développement :
 modèles au format [JSON](https://www.json.org/json-en.html) : `exercicex.json` (exercice x) et adaptez en conséquence `exerciceTemplate.hbs` et `src/lib/scripts/exerciceModule.js`.
 + Puis déposez ces nouvelles données dans `static/data`.
 + Pensez aussi à actualiser en conséquence la liste des exercices, en adaptant le contenu du fichier `liste_exercices.json` dans le dossier `static/config`.
-+ Selon les niveaux envisagés, modifiez aussi `static/config/niveaux.jon`.
++ Selon les niveaux envisagés, modifiez aussi `static/config/niveaux.json`.
 
 ### Adaptation de l'aide
 
@@ -148,9 +148,16 @@ démarrage, par exemple&nbsp;:
 
 + La cible de la publication est la branche *gh-pages* qui coïncide avec la branche *master*.
 + Effectuez préalablement ce réglage dans les paramètres de votre dépôt 
-Github la première fois. Vous devez aussi créer un token d'authentification comme expliqué dans la documentation de Github.
+Github la première fois. Vous devez aussi créer un _token_ d'authentification comme expliqué dans la documentation de Github.
 
 Puis exécutez:
 
     npm run clean;
     npm run deploy
+
+## Compatibilité
+
+### Avec le routeur Navigo
+
++ Pour des raisons de compatibilité, la version du routeur Navigo est figée à la `version 7.1.2`.
++ Si vous modifiez cette version dans le fichier de configuration `package.json` pour migrer vers la version 8 de ce routeur, vous risquez de briser tous les liens de routage et de produire une application inutilisable. Vous voilà prévenu.e.

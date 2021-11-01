@@ -9,7 +9,6 @@ OFFLINE=offline.html
 PACKAGE=package.json
 ROBOTS=robots.txt
 
-
 # On récupère les données à adapter
 echo "Nom de votre application (un mot unique, en minuscules, sans accents):"
 read NOM_APP

@@ -1,7 +1,9 @@
 {
 	"niveaux":
 		[
+			{ "chiffre": "6", "nom": "Sixième" },
 			{ "chiffre": "5", "nom": "Cinquième" },
+			{ "chiffre": "4", "nom": "Quatrième" },
 			{ "chiffre": "3", "nom": "Troisième" },
 			{ "chiffre": "*", "nom": "Tous" }
 		]
